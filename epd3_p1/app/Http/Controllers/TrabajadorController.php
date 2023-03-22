@@ -39,7 +39,7 @@ class TrabajadorController extends Controller
     {
        $request->validate([
         'telefonos' => 'required',
-        'Trabajador_id'=> 'required'
+        'persona_id'=> 'required'
         ]);
         
         Trabajador::create($request->post());
@@ -80,7 +80,7 @@ class TrabajadorController extends Controller
     {
         $request->validate([
             'telefonos' => 'required',
-            'Trabajador_id'=> 'required'
+            'persona_id'=> 'required'
         ]);
         
         $Trabajador->fill($request->post())->save();

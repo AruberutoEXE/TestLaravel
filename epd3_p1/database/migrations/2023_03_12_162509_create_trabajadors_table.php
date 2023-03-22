@@ -16,12 +16,8 @@ return new class extends Migration
         Schema::create('trabajadors', function (Blueprint $table) {
             $table->id();
             $table->string('telefonos');
-            $table->unsignedBigInteger('persona_id');
-           // $table->foreign('persona_id')->references('id')->on('personas')->onDelete('cascade');
+            $table->foreignId('persona_id')->references('id')->on('personas');;
             $table->timestamps();
-        });
-        Schema::table('trabajadors', function($table) {
-            $table->foreign('persona_id')->references('id')->on('personas');
         });
     }
 

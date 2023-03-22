@@ -14,10 +14,10 @@ $message='illo sus muertos esto no funciona D:';
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Edit Persona</h2>
+                    <h2>Edit Empleado</h2>
                 </div>
                 <div class="pull-right">
-                    <a class="btn btn-primary" href="{{ route('Persona.index') }}" enctype="multipart/form-data">
+                    <a class="btn btn-primary" href="{{ route('Empleado.index') }}" enctype="multipart/form-data">
                         Back</a>
                 </div>
             </div>
@@ -27,7 +27,7 @@ $message='illo sus muertos esto no funciona D:';
             {{ session('status') }}
         </div>
         @endif
-        <form action="{{ route('Persona.update',$Persona->id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('Empleado.update',$Empleado->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="row">

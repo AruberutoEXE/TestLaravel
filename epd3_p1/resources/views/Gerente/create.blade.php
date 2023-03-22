@@ -17,7 +17,7 @@ $message='illo sus muertos esto no funciona D:';
                     <h2>Añadir gerente</h2>
                 </div>
                 <div class="pull-right">
-                    <a class="btn btn-primary" href="{{ route('Persona.index') }}"> Back</a>
+                    <a class="btn btn-primary" href="{{ route('Gerente.index') }}"> Back</a>
                 </div>
             </div>
         </div>
@@ -26,7 +26,7 @@ $message='illo sus muertos esto no funciona D:';
             {{ session('status') }}
         </div>
         @endif
-        <form action="{{ route('Persona.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('Gerente.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">

@@ -17,11 +17,8 @@ return new class extends Migration
             $table->id();
             $table->integer('horasTrabajadas');
             $table->integer('precioPorHora');
-            $table->unsignedBigInteger('trabajador_id');
+            $table->foreignId('trabajador_id')->references('id')->on('trabajadors');
             $table->timestamps();
-        });
-        Schema::table('empleados', function($table) {
-            $table->foreign('trabajador_id')->references('id')->on('trabajadors');
         });
     }
 

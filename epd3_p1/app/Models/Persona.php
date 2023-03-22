@@ -10,4 +10,5 @@ class Persona extends Model
     public $timestamps = false;
     use HasFactory;
     protected $fillable = ['nombre', 'apellidos', 'edad'];
+    
 }

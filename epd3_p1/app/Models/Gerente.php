@@ -9,5 +9,8 @@ class Gerente extends Model
 {
     public $timestamps = false;
     use HasFactory;
-    protected $fillable = ['salario'];
+    protected $fillable = ['salario','trabajador_id'];
+    public function trabajador(){
+        return $this->belongsTo(Trabajador::class, 'trabajador_id');
+    }
 }
